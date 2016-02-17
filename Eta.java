@@ -13,7 +13,7 @@ public class Eta{
 			System.out.println("anno attuale ?");
 
 			int born=tastiera.nextInt();
-
+ 	
 			System.out.println(born-nome); 				
 	}
 
