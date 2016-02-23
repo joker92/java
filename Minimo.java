@@ -1,5 +1,5 @@
 import java.util.Scanner;
-// si richiedono 10 valori e si ffornisce in oput la media aritmetica	
+// si richiedono 10 valori e si ffornisce in oput la minimo dei numeri	
 
 	class Minimo {
   public static void main(String[] args) {
@@ -9,7 +9,7 @@ import java.util.Scanner;
 
     somma=0;
     minimo=0;
-    
+
     for(i=0; i<10-1; i++) {
 	System.out.println("valore "+i);
 	somma=tastiera.nextInt();     

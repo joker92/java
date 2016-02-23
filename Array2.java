@@ -22,6 +22,7 @@ public class Array2{
 		{
 			System.out.println("inserire numeri :");
 			numbers[i] = tastiera.nextDouble();
+			
 		}
 	
 }
