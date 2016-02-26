@@ -16,16 +16,16 @@ public class Array2{
 
 		
 
-		double[] numbers = new double[arrayDim];
+			double[] numbers = new double[arrayDim];
 
-		for (int i= 0; i < numbers.length; i++)
-		{
-			System.out.println("inserire numeri :");
-			numbers[i] = tastiera.nextDouble();
+			for (int i= 0; i < numbers.length; i++)
+			{
+				System.out.println("inserire numeri :");
+				numbers[i] = tastiera.nextDouble();
 			
-		}
+			}
 	
-}
+	}
 
 
 }

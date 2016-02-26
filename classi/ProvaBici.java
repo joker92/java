@@ -8,16 +8,26 @@ public class ProvaBici{
 	public static void main(String[] args) {
 		Scanner tastiera=new Scanner(System.in);
 		int velocita;
+                
 
 		Bicicletta biciA;
 		Bicicletta biciB;
 		Bicicletta biciC;
+                Persona ragazzoA;
+                Persona ragazzoB;
+                Persona ragazzoC;
 
-
-		biciA=new Bicicletta("bmx",2);
-		biciB=new Bicicletta("graziella",1);
-		biciC=new Bicicletta("montambike",3);
-
+                ragazzoA=new Persona("gianni","pippo");
+                ragazzoB=new Persona("luca","paperino");
+                ragazzoC=new Persona("laura","ciao");
+                
+                
+		biciA=new Bicicletta("bmx",ragazzoA,2,15);
+		biciB=new Bicicletta("graziella",ragazzoB,1,20);
+		biciC=new Bicicletta("montambike",ragazzoC,3,30);
+                
+                
+                
 
 System.out.println("velocita biciA:");
 		velocita=tastiera.nextInt();
