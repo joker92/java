@@ -1,0 +1,118 @@
+
+-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+creare un progetto wiket !!!!!!!!!!!!1
+
+*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+1) andare su wiket.it
+
+2) fare quik start 
+
+3)compilare il group id che sarebbe il pakage  
+
+artifact id è il nome del sito 
+
+la versione non scegliere mai la snapshot
+
+
+server qualsiasi tranne	whild fly
+
+
+
+
+
+4)
+poi copiare il link del sito sulla cartella progetti che e in home 
+
+
+
+
+5)una volta finito di crearlo abbiamo nella cartella progetti una cartella chiamata mar 15
+
+
+6)una volta creata andiamo su netbeans fare new progect  e aprire il progetto 
+
+
+
+
+
+*****il file prom.xml si trova  nel ultimo albero nel cartella project  files ******
+
+
+
+
+
+********
+/opt/lampp/bin/mysql -h a22docente -u softuser -p
+
+
+
+connettersi a mysql per esame 
+
+pass _s0ft*
+
+
+*********************************************************
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+
+connettersi al database:
+
+
+mysql -h 127.0.0.1 -u root -P 9918
+
+
+
+*************************************************************
+creare un database  
+
+create database `mar21` default charset=utf8;
+
+********************************
+non serve all esame :
+dare accesso al database ad un utente  creare utente senza php my admin 
+
+
+grant all on `mar21`.* to `nomeutente`@`localhost` identified by "pwd";
+**********************************
+per usare il database:
+use mar21
+
+***********************************
+creare una tabella su database :
+
+nome della tabella al singolare
+create table `persona`(id integer auto_increment primary key,nome varchar(255),cognome varchar(255),codice_fiscale char(16),note text default null) Engine=InnoDB ;
+***********************************
+
+creare tabella con la fereing  :
+
+create table carrello (id integer auto_increment primary key,data_creazione datetime not null,id_persona integer ,constraint foreign key(id_persona)references persona(id))Engine=InnoDB;
+*******************************************
+
+se non funziona xamp utilizzare il database di ubuntu 
+
+il comando per essere per connettersi 
+
+mysql -h 127.0.0.1 -root -P 9918
+
+
+*******************************
+inserire una persona nel database :
+
+
+INSERT INTO persona VALUES (NULL,"joekr","jo","JKOLSHJKLXNXMLSO","bella");
+********************************
+
+INSEIRIER DATA NASCITA 
+
+ alter table post add data_nascita date not  null after id;
+*******************************
+AGGIUNGERE LA DATA 
+ update persona set data_nascita='1903-11-21' where id=1;
+*********************************************
+
+
+
+!!!!!!!!!!!!!!!!!!!!alle esame creare il database con il nostro nome §!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
