@@ -1,0 +1,100 @@
+import java.util.Scanner;
+
+public class Bici
+{
+	private String nomeProprietario;
+	private String modello;
+	private int marcia;
+	private double velocita;
+	private int numeroTelaio;
+	static int contatore = 0;
+	static final int VELOCITA_MAX = 70;
+	
+	public Bici(String nomeProprietarioP, String modelloP, double velocitaP, int marciaP)
+	{
+		this.nomeProprietario = nomeProprietarioP;
+		this.modello = modelloP;
+		this.velocita = velocitaP;
+		this.marcia = marciaP;
+		this.numeroTelaio=++contatore;
+	
+	}
+	public Bici(String modelloP, double velocitaP)
+	{
+		this("Francesco", modelloP, velocitaP, 3);
+		this.modello = modelloP;
+		this.velocita = velocitaP;
+		
+	
+	}
+	public static int getContatore()
+	{
+		return contatore;
+	}
+	
+	public String getNomeProprietario(){
+		return nomeProprietario;
+	}
+	public String getModello(){
+		return modello;
+	}
+	public double getVelocita(){
+		return velocita;
+	}
+	public int getMarcia(){
+		return marcia;
+	}
+	public void cambiaMarcia(int nuovaMarc){
+		marcia = nuovaMarc;
+	}
+	public void aumentaVelocita(double incremento){
+		velocita=velocita+incremento;
+		if(velocita>VELOCITA_MAX)
+			velocita=VELOCITA_MAX;
+	}
+	public void stampaStato(){
+		System.out.println
+		("Proprietario: "+nomeProprietario+"\nmodello: "+modello+"\nvelocità: "+velocita+"\nmarcia: "+marcia+"\ntelaio: "+numeroTelaio);
+	}
+}
+
+
+
+public class ProvaBici
+{
+	public static void main (String [] args)
+	{
+		Bici biciA = new Bici ( "Marco", "BMX", 50, 4);
+		Bici biciB = new Bici ( "graziella", 30);
+		Bici biciC = new Bici ( "Luca", "BMX", 60, 5);
+		
+		Scanner tastiera=new Scanner(System.in);
+		System.out.println("Quanto vuoi aumentare la velocità di biciA?");
+		double a=tastiera.nextInt();
+		System.out.println("Quanto vuoi aumentare la velocità di biciB?");
+		double b=tastiera.nextInt();
+		System.out.println("Quanto vuoi aumentare la velocità di biciC?");
+		double c=tastiera.nextInt();
+		biciA.aumentaVelocita (a);
+		biciB.aumentaVelocita (b);
+		biciC.aumentaVelocita (c);
+		System.out.println("Aumenta ancora la velocità di biciA di quanto?");
+		double e=tastiera.nextInt();
+		System.out.println("Aumenta ancora la velocità di biciB di quanto?");
+		double f=tastiera.nextInt();
+		System.out.println("Aumenta ancora la velocità di biciC di quanto?");
+		double g=tastiera.nextInt();
+		biciA.aumentaVelocita (e);
+		biciB.aumentaVelocita (f);
+		biciC.aumentaVelocita (g);
+		biciA.stampaStato();
+		biciB.stampaStato();
+		biciC.stampaStato();
+		System.out.println("La bici più veloce è");
+		if (biciA.getVelocita()>=biciB.getVelocita() && biciA.getVelocita()>=biciC.getVelocita())
+			biciA.stampaStato();
+		else if (biciB.getVelocita()>=biciA.getVelocita() && biciB.getVelocita()>=biciC.getVelocita())
+			biciB.stampaStato();
+		else biciC.stampaStato();		
+	}
+}
