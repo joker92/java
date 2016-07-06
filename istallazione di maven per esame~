@@ -93,7 +93,10 @@ se non funziona xamp utilizzare il database di ubuntu
 
 il comando per essere per connettersi 
 
-mysql -h 127.0.0.1 -root -P 9918
+mysql -h 127.0.0.1 -u root -P 9918
+
+
+mysql -h 127.0.0.1 -u root
 
 
 *******************************
@@ -111,8 +114,26 @@ AGGIUNGERE LA DATA
  update persona set data_nascita='1903-11-21' where id=1;
 *********************************************
 
+per avviare lo script del database essere nella cartella dello script e da terinale mettere stringa
 
+
++-+-+--+ percorso della cartella dove esegurire lo script+---++-+-+-
+svilupposw@a22pc03l:~/progetti/esercizioEsame/src/main/resources$ :  
+
+il comando è!!!!:
+
+
+mysql -h 127.0.0.1 -u root < database.sql 
+
+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-++-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+cp -a nome del file da copiare---- >nome del file che si vuole chiamare 
+
+cp -a esercizioEsame esame
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++
 
 !!!!!!!!!!!!!!!!!!!!alle esame creare il database con il nostro nome §!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
++-+-+-+-+-+-+-+--+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 

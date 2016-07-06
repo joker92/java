@@ -93,7 +93,10 @@ se non funziona xamp utilizzare il database di ubuntu
 
 il comando per essere per connettersi 
 
-mysql -h 127.0.0.1 -root -P 9918
+mysql -h 127.0.0.1 -u root -P 9918
+
+
+mysql -h 127.0.0.1 -u root
 
 
 *******************************
@@ -111,8 +114,31 @@ AGGIUNGERE LA DATA
  update persona set data_nascita='1903-11-21' where id=1;
 *********************************************
 
+per avviare lo script del database essere nella cartella dello script e da terinale mettere stringa
 
+
++-+-+--+ percorso della cartella dove esegurire lo script+---++-+-+-
+svilupposw@a22pc03l:~/progetti/esercizioEsame/src/main/resources$ :  
+
+il comando è!!!!:
+
+
+mysql -h 127.0.0.1 -u root < database.sql 
+
+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-++-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+cp -a nome del file da copiare---- >nome del file che si vuole chiamare 
+
+cp -a esercizioEsame esame
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++
+per vedere se il database funziona da comando digitare:
+
+netstat -nltp
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+per crear i beans andare su  suorse pakage tasto destro creare nuovo  java pakagepakage ... una volta creato fare sul pakage new  entyt class from databases e selezionare il db e fare fare add all per mettere  i campi 
+
+
 
 !!!!!!!!!!!!!!!!!!!!alle esame creare il database con il nostro nome §!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
